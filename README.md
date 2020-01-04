@@ -20,4 +20,4 @@ explicitly set the file’s offset used by the file descriptor.
 
 
 Bench.c runs both methods and stores their runtime in 2 different files temp.txt and temp2.txt then merge them in bench.txt.
-It uses the values of N:1, 2, 4, 8.
+It uses the values of N: 1, 2, 4, 8.
