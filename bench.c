@@ -78,13 +78,6 @@ int main()
     fprintf(file,"%s %f %f\n", "8", execNo[3], execOp[3]);
     fclose(file);
 	
-//  I tried to run gnuplot and ps2pdf but it's not working    
-    worker_pids[0] = fork();
-    if(worker_pids[0] == 0)
-	    execl("gnuplot","gnuplot", "plot", NULL);
-    else if(worker_pids[0] > 0){
-	    wait(&status);
-	    execl("ps2pdf", "ps2pdf", "bench.ps", NULL);
-    }	
+
     return 0;
 }
