@@ -13,7 +13,7 @@ lines. Then, the main process has to spawn a new process that does the split, an
 Optimization:
 In order to improve the performance of the above implementation, we'll use multi-threading to eliminate (1) the creation of the shared memory and use instead global variable, and (2) the split phase done by the first child process. For this, when the main process takes the number of splits N:
 
-• We create N threads modeling workers, and 3 threads modeling reducers.
+• We create N threads modeling mappers, and 3 threads modeling reducers.
 
 • Each mapper has to open the original file; then, uses lseek to
 explicitly set the file’s offset used by the file descriptor.
