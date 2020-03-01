@@ -1,8 +1,8 @@
-bench: bench.o
-	gcc bench.o -o bench
-bench.o: bench.c optimization shm
-	gcc -c bench.c
-shm: shm.c
+bench:
+	gcc -o bench bench.c
 	gcc -o shm shm.c
-optimization: optimization.c
-		gcc -o optimization optimization.c -lpthread
+	gcc -o optimization optimization.c -lpthread
+shm:	shm
+	gcc -o shm shm.c
+optimization:	optimization
+	gcc -o optimization optimization.c -lpthread
